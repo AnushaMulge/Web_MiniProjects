@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 15px 100px;
+}
+.header img{
+    height: .5%x;
+    width: .5%;
+}
+.logo{
+    color: #444;
+    font-size: 25px;
+    font-weight: 600;
+}
+.logo img{
+    width: 250px;
+    height: 100px;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #444;
+    font-weight: no;
+}
+.book{
+    padding: 10px 20px;
+    background-color:rgb(227, 89, 89) ;
+    font-weight: 500;
+    color: white;
+    border-radius: .5rem;
+}
+.book:hover{
+    transform: scale(1.1);
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgb(107, 102, 102);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+ input{
+    display: none;
+ }
+.container{
+    width: 100%;
+    text-align: center;
+}
+ h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+ }
+ h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: animate 4s linear infinite;
+ }
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+.top-content{
+    background-color: rgb(243,243,243);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px lightgray;
+}
+h3{
+    height: 100%;
+    background-color: rgb(37, 22, 22);
+    line-height: 60px;
+    padding: 0 50px;
+    color: white;
+}
+
