@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --main-color: #e1af30;
+    --second-color: #edb933;
+    --text-color: #fff;
+    --gradient: linear-gradient(#edb933,#edb933);
+}
+/*Custom Scroll Bar*/
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    height: auto;
+}
+html::-webkit-scrollbar-thumb{
+    background: transparent;
+}
+html::-webkit-scrollbar-track{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+section {
+    padding: 50px 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e1e1f;
+    padding: 10px 100px;
+    border-bottom: 1px solid silver;
+}
+.logo img {
+    width: 70px;
+    height: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.navbar a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.header-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.header-btn .sign-in{
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.header-btn .sign-in:hover{
+    background: var(--main-color);
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url('Images/carp1.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+.text h1{
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+}
+.text span{
+    color: var(--main-color);
+}
+.text p{
+    margin: 0 0.5rem 0 1rem;
+}
+ .form-container form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    bottom: 3rem;
+    left: 100px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+.input-box{
+    flex: 1 1 9rem;
+    display: flex;
+    flex-direction:column;
+}
+.input-box span{
+    font-weight: 500;
+}
+.input-box input{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+ .form-container form .btn{
+    flex: 1 1 7rem;
+    padding: 10px 34px;
+    border: none;
+    border-radius: 0.5rem;
+    gap: 3rem;
+    background: #474fa0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.form-container form .btn:hover{
+    background: var(--main-color);
+}
+footer{
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1f;
+    text-align: center;
+    color: #fff;
+    border-top: 2px solid silver;
+}
+section {
+    background: #fff;
+}
+.Intro img{
+    align-items: center;
+    border-radius: 2rem;
+    padding: 10px ;
+    width:33%;
+    height:30%;
+    display: inline-block;
+}
+.Intro img:hover{
+    opacity: 0.6;
+}
+.button-contain button{
+    width: 12%;
+    margin-top: 180px;
+    padding: 2px;
+    gap: 1rem;
+    cursor: pointer;
+    display: float;
+    float: right;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,#1dde0f,  #10a7e2);
+}
+.button-contain button:hover{
+    background-image: linear-gradient(to right,  #10a7e2, #1dde0f);
+}
+
+.trip{
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+    background: url('Images/carBg5.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 2px solid silver;
+    border-top: 2px solid silver;
+}
+.Trip .form-container form{
+   bottom: 7rem;
+   left: 100px;
+   padding: 20px;
+}
+.heading{
+    text-align: center;
+    color: #edb933;
+}
+.heading span{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.heading h1{
+    font-size: 2rem;
+}
+.ride .special{
+    padding: 15px;
+    border-bottom: 2px solid silver;
+}
+.ride-container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 10px;
+}
+.ride-container .box{
+    text-align: center;
+    color: #0d0d0e;
+    padding: 50px;
+    border-style: groove;
+    border-color: #e1af30;
+    background: #fff;
+    border-radius: 0.8rem;
+}
+.ride-container .box .bx{
+    font-size: 34px;
+    padding: 10px;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+}
+.ride-container .box h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+}
+.ride-container .box .bx:hover ,.ride-container .box .bxs-calendar-star:hover {
+    background: var(--gradient);
+    color: #fff;
+    cursor: pointer;
+}
+.branches{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 15px;
+    border-bottom: 2px solid silver;
+}
+.branches .bx{
+    text-align: center;
+    color: #0d0d0e;
+    background: #fff;
+    border-radius: 0.8rem;
+}
+.branches .bx .bx{
+    font-size: 34px;
+    padding: 5px;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+}
+.branches .bx h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+}
+.branches .bx .bx:hover ,.branches .bx .bxs-calendar-star:hover {
+    background: var(--gradient);
+    color: #fff;
+    cursor: pointer;
+}
+h4{
+        text-align: center;
+        color: #edb933;
+        padding: 10px;
+}
+

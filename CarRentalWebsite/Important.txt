@@ -1,0 +1,49 @@
+https://www.kia.com/dm/discover-kia/ask/what-types-of-cars-are-there.html
+
+Types of Car Models:
+
+suvs
+https://www.caranddriver.com/research/a31863853/types-of-suvs/
+
+convertible-cars
+https://www.godigit.com/motor-insurance/car-insurance/find/convertible-cars-in-india
+
+Sedan cars
+https://philkotse.com/car-buying-and-selling/how-many-types-of-sedan-car-are-there-1169
+
+Sports Cars
+https://www.caranddriver.com/features/g27197524/best-sports-cars/
+
+Coupe Cars
+https://www.carmax.com/articles/best-coupe-cars-ranking
+
+
+Code for MySQLconnection:
+
+<?php
+include('connection.php');
+session_start();
+?>
+
+/* table: login
+attributes: uname,pass*/
+
+<?php
+     if(isset($_POST['sub']))
+     {
+          $un=$_POST['un'];
+          $ps=$_POST['ps'];
+          $q=$db->prepare("SELECT * FROM login WHERE uname='$un' AND pass='$ps'");
+          $q->execute();
+          $res=$q->fetchAll(PDO::FETCH_OBJ);
+          if($res)
+          {
+               $_SESSION['un']=$un;
+               header("Location:HomePage.php");
+          }
+          else
+          {
+               echo "<script>Alert('Wrong User')</script>";
+          }
+      }
+?>
